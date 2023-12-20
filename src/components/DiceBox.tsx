@@ -1,9 +1,5 @@
-function DiceBox({ s }: { s: string }) {
-  return (
-    <div>
-      <h1>{s}</h1>
-    </div>
-  );
+function DiceBox({ n }: { n: number }) {
+  return <h1>{n}</h1>;
 }
 
 export default DiceBox;

@@ -4,16 +4,15 @@ import DiceBox from "./components/DiceBox";
 import RollButton from "./components/RollButton";
 
 function App() {
-  const [count, setCount] = useState(0);
-  let roll: string = "1";
+  const [roll, setRoll] = useState(1);
 
   return (
     <>
       <div>
-        <DiceBox s={roll}></DiceBox>
-        <button onClick={() => (roll = "" + Math.floor(Math.random() * 6) + 1)}>
-          ROLL
-        </button>
+        <DiceBox n={roll} />
+        <RollButton
+          onclick={() => setRoll(Math.floor(Math.random() * 20) + 1)}
+        />
       </div>
     </>
   );
