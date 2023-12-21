@@ -1,9 +1,15 @@
+import { MouseEventHandler } from "react";
+
 interface Props {
-  onclick: Function;
+  onclick: MouseEventHandler;
 }
 
 function RollButton({ onclick }: Props) {
-  return <button onClick={() => onclick()}>ROLL</button>;
+  return (
+    <button type="button" className="btn btn-primary" onClick={onclick}>
+      ROLL
+    </button>
+  );
 }
 
 export default RollButton;
