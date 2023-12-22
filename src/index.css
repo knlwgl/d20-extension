@@ -59,7 +59,7 @@ button:active {
 .DiceTray {
   width: 500px;
   display: flex;
-  padding: 0 25px;
+  padding: 20px;
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -82,6 +82,7 @@ button:active {
   height: 100px;
   transform-style: preserve-3d;
   transition: transform 1s;
+  transform: rotateX(-45deg) rotateY(-45deg);
 }
 
 .d6-s1,
