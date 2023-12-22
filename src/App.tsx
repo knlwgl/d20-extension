@@ -1,17 +1,28 @@
 import { useState } from "react";
 import "./App.css";
-import DiceBox from "./components/DiceBox";
+import DiceBag from "./components/DiceBag";
+import DiceTray from "./components/DiceTray";
 import RollButton from "./components/RollButton";
 
 function App() {
   const [roll, setRoll] = useState(1);
+  const [diceSize, setSize] = useState(6);
 
   return (
     <>
       <div>
-        <DiceBox n={roll} />
+        <DiceBag></DiceBag>
+        <DiceTray sides={diceSize} n={roll} />
         <RollButton
-          onclick={() => setRoll(Math.floor(Math.random() * 20) + 1)}
+          onclick={() => {
+            const n = Math.floor(Math.random() * 6) + 1;
+            if (n == roll) {
+              setRoll(0);
+              setTimeout(() => setRoll(n), 1500);
+            } else {
+              setRoll(n);
+            }
+          }}
         />
       </div>
     </>
