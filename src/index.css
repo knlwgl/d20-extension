@@ -11,6 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 200px;
+  min-height: 250px;
+  padding: 15px;
 }
 
 a {
@@ -27,8 +30,6 @@ body {
   display: flex;
   place-items: center;
   justify-content: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -57,7 +58,7 @@ button:active {
 }
 
 .DiceTray {
-  width: 500px;
+  max-width: 500px;
   display: flex;
   padding: 20px;
 }

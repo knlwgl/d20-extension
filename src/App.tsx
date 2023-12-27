@@ -6,7 +6,7 @@ import RollButton from "./components/RollButton";
 
 function App() {
   const [roll, setRoll] = useState(1);
-  const [diceSize, setSize] = useState(6);
+  const [diceSize] = useState(6);
 
   return (
     <>
