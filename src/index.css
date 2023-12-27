@@ -13,7 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
   min-width: 200px;
   min-height: 250px;
-  padding: 15px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 a {
@@ -26,7 +28,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   place-items: center;
   justify-content: center;
@@ -49,6 +51,7 @@ button {
   box-shadow: 2px 3px #c69774;
   cursor: pointer;
   transition: 0.25s;
+  margin: 0 auto;
 }
 button:hover,
 button:active {
@@ -57,10 +60,16 @@ button:active {
   box-shadow: 1px 2px #c69774;
 }
 
+btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
 .DiceTray {
   max-width: 500px;
   display: flex;
-  padding: 20px;
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -84,6 +93,7 @@ button:active {
   height: 100px;
   transform-style: preserve-3d;
   transition: transform 1.5s;
+  padding: 20px;
 }
 /* animation: revolve 20s linear infinite;
 }
